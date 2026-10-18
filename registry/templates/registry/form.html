@@ -1,0 +1,8 @@
+{% extends "registry/base.html" %}
+{% block content %}
+<h1>{% if obj %}Edit{% else %}Add{% endif %} beneficiary</h1>
+<form method="post">{% csrf_token %}
+  {{ form.as_p }}
+  <button>Save</button>
+</form>
+{% endblock %}

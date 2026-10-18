@@ -1,0 +1,17 @@
+{% extends "registry/base.html" %}
+{% block content %}
+<h1>Dashboard</h1>
+<div class="cards">
+  <div class="card"><b>{{ total }}</b>Registered households</div>
+  <div class="card"><b>{{ people_reached }}</b>People reached</div>
+  <div class="card"><b>{{ duplicate_groups }}</b>Possible duplicate groups</div>
+</div>
+<h2>By status</h2>
+<table><tr><th>Status</th><th>Count</th></tr>
+{% for r in by_status %}<tr><td>{{ r.status }}</td><td>{{ r.n }}</td></tr>{% empty %}<tr><td colspan="2">No data yet.</td></tr>{% endfor %}
+</table>
+<h2>Top districts</h2>
+<table><tr><th>District</th><th>Count</th></tr>
+{% for r in by_district %}<tr><td>{{ r.district }}</td><td>{{ r.n }}</td></tr>{% empty %}<tr><td colspan="2">No data yet.</td></tr>{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Beneficiary Manager{% endblock %}</title>
+<style>
+  body{font-family:system-ui,Segoe UI,Arial,sans-serif;margin:0;color:#222;background:#f6f8fa}
+  nav{background:#1f3b57;padding:12px 24px;display:flex;gap:18px;flex-wrap:wrap}
+  nav a{color:#fff;text-decoration:none;font-weight:600}
+  main{max-width:960px;margin:24px auto;padding:0 16px}
+  table{width:100%;border-collapse:collapse;background:#fff}
+  th,td{padding:8px 10px;border-bottom:1px solid #e1e4e8;text-align:left}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:20px}
+  .card{background:#fff;padding:16px;border-radius:8px;border:1px solid #e1e4e8}
+  .card b{font-size:1.8rem;display:block;color:#1f3b57}
+  .msg{background:#e6f4ea;padding:8px 12px;border-radius:6px;margin-bottom:12px}
+  .err{color:#b00020}
+  input,select,textarea{padding:6px;margin:2px 0;max-width:100%}
+  button{background:#1f3b57;color:#fff;border:0;padding:8px 14px;border-radius:6px;cursor:pointer}
+</style>
+</head>
+<body>
+<nav>
+  <a href="{% url 'registry:dashboard' %}">Dashboard</a>
+  <a href="{% url 'registry:list' %}">Beneficiaries</a>
+  <a href="{% url 'registry:new' %}">Add</a>
+  <a href="{% url 'registry:duplicates' %}">Duplicates</a>
+  <a href="{% url 'registry:import' %}">Import CSV</a>
+  <a href="{% url 'registry:export' %}">Export Excel</a>
+</nav>
+<main>
+{% for m in messages %}<div class="msg">{{ m }}</div>{% endfor %}
+{% block content %}{% endblock %}
+</main>
+</body>
+</html>

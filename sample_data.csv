@@ -1,0 +1,28 @@
+national_id,full_name,phone,district,household_size,status
+900000001,Layla Abu Amr,0599100037,Deir al-Balah,1,active
+900000002,Yousef Saleh,0599100074,Rafah,1,pending
+900000003,Ahmad Saleh,0599100111,Deir al-Balah,7,active
+900000004,Mona Saleh,0599100148,Jabalia,7,active
+900000005,Rana Saleh,0599100185,Khan Younis,1,closed
+900000006,Ahmad Nasser,0599100222,Gaza City,9,pending
+900000007,Khaled Salem,0599100259,Khan Younis,9,active
+900000008,Rana Khalil,0599100296,Jabalia,3,active
+900000009,Rana Nasser,0599100333,Rafah,2,active
+900000010,Rana Hassan,0599100370,Jabalia,4,closed
+900000011,Ibrahim Salem,0599100407,Rafah,8,closed
+900000012,Layla Khalil,0599100444,Khan Younis,3,pending
+900000013,Mohammed Khalil,0599100481,Jabalia,8,active
+900000014,Noor Barakat,0599100518,Rafah,2,active
+900000015,Yousef Salem,0599100555,Khan Younis,6,pending
+900000016,Huda Salem,0599100592,Gaza City,2,active
+900000017,Layla Darwish,0599100629,Jabalia,8,closed
+900000018,Mohammed Saleh,0599100666,Rafah,8,active
+900000019,Ahmad Khalil,0599100703,Jabalia,8,active
+900000020,Noor Salem,0599100740,Rafah,1,closed
+900000021,Layla Abu Amr,0599100777,Jabalia,2,closed
+900000022,Ahmad Nasser,0599100814,Rafah,3,pending
+900000023,Omar Salem,0599100851,Deir al-Balah,2,pending
+900000024,Huda Salem,0599100888,Jabalia,5,pending
+900000025,Omar Khalil,0599100925,Deir al-Balah,6,closed
+900000099,Sara Hassan,0599100037,Gaza City,4,active
+12345,Bad Id Row,0599000000,Rafah,3,active

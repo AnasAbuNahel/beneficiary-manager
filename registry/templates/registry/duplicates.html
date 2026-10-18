@@ -1,0 +1,11 @@
+{% extends "registry/base.html" %}
+{% block content %}
+<h1>Possible duplicates</h1>
+<p>Records sharing a phone number, or the same name in the same district.</p>
+{% for g in groups %}
+<h3>Matched by {{ g.reason }}</h3>
+<table>{% for b in g.members %}
+<tr><td>{{ b.national_id }}</td><td>{{ b.full_name }}</td><td>{{ b.phone }}</td><td>{{ b.district }}</td><td><a href="{% url 'registry:edit' b.pk %}">Edit</a></td></tr>
+{% endfor %}</table>
+{% empty %}<p>No duplicates found.</p>{% endfor %}
+{% endblock %}

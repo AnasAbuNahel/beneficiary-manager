@@ -1,0 +1,14 @@
+{% extends "registry/base.html" %}
+{% block content %}
+<h1>Import from CSV</h1>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+  {{ form.as_p }}
+  <button>Import</button>
+</form>
+{% if report %}
+<h2>Result</h2>
+<p>Created: <b>{{ report.created }}</b> &middot; Already existed: <b>{{ report.skipped_existing }}</b> &middot; Rejected rows: <b>{{ report.errors|length }}</b></p>
+{% if report.errors %}<table><tr><th>CSV line</th><th>Problem</th></tr>
+{% for line, msg in report.errors %}<tr><td>{{ line }}</td><td class="err">{{ msg }}</td></tr>{% endfor %}</table>{% endif %}
+{% endif %}
+{% endblock %}
